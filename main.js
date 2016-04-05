@@ -32,10 +32,6 @@ fs.readFile("GeographicCoordinates/" + jsonfilename + ".geojson", "utf8", functi
 	console.log("Parsed JSON");
 	var elementIndex = 0;
 	json.features.forEach(function(feature) {
-		if(elementIndex % 10 != 0) {
-			elementIndex += 1;
-			return;
-		}
 		console.log("At element index #" + String(elementIndex));
 		var p = feature.geometry.coordinates
 		var params = {
